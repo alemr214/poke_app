@@ -1,12 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
-      <body></body>
+      <Navbar />
+      <div class="row row-cols-1 row-cols-md-6 g-4">
+        <div class="col">
+          <Card />
+        </div>
+      </div>
     </div>
   );
 }
