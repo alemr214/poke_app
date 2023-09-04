@@ -1,4 +1,21 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 function Card() {
+  const [pokemonList, setPokemonList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://pokeapi.co/api/v2/pokemon?limit=18") // Call PokeAPI
+      .then((response) => {
+        const names = response.data.result.map((pokemon) => pokemon.name); // Pass pokemons name
+        setPokemonList(names); // Keeping pokemons
+      })
+      .catch((error) => {
+        console.error("Error fetching Pokémon list", error); // Error message
+      });
+  }, []);
+
   return (
     <div class="card">
       <img src="..." class="card-img-top" alt="..." />
