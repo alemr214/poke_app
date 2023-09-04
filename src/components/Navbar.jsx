@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary m-2">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           Navbar
