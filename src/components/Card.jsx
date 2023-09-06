@@ -24,11 +24,19 @@ const Card = ({ pokemonName }) => {
             src={pokemonData.sprites.front_default}
             alt={pokemonData.name}
           />
-          <div className="card-body">
+          <div className="card-body bg-light">
             <h5 className="card-title">{pokemonData.name}</h5>
             <p className="card-text">
-              {pokemonData.species && pokemonData.species.name}
+              Types:{" "}
+              {pokemonData.types.map((type) => (
+                <span key={type.slot} className="badge bg-info me-1">
+                  {type.type.name}
+                </span>
+              ))}
             </p>
+            <button type="button" class="btn btn-primary">
+              More info
+            </button>
           </div>
         </>
       )}
