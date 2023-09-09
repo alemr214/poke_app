@@ -5,7 +5,7 @@ function SearchBar({ searchTerm, setSearchTerm, handleSearch }) {
     <div>
       <input
         type="text"
-        placeholder="Buscar Pokémon por nombre o ID"
+        placeholder="Busca por name o ID"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

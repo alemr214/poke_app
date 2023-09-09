@@ -14,6 +14,7 @@ function Card({ pokemon, handlePokemonClick, selectedPokemon }) {
           className="card-img-top"
         />
       ) : (
+        // Call the image for each pokemon
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
             pokemon.url.split("/")[6]
@@ -23,6 +24,7 @@ function Card({ pokemon, handlePokemonClick, selectedPokemon }) {
         />
       )}
       <div className="card-body">
+        {/* Load the Pokemon's name  */}
         <h5 className="card-title">{pokemon.name}</h5>
       </div>
     </div>

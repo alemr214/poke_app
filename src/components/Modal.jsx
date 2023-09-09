@@ -6,6 +6,7 @@ function Modal({ selectedPokemon, closeModal }) {
   }
 
   return (
+    // Loads the modals with the information
     <div
       className="modal fade show"
       id="pokemonModal"

@@ -6,6 +6,7 @@ import Modal from "./Modal";
 import Pagination from "./Pagination";
 
 function List() {
+  // States to manage information
   const [pokemonList, setPokemonList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -15,6 +16,7 @@ function List() {
 
   const itemsPerPage = 18;
 
+  // Effect in loading page
   useEffect(() => {
     async function fetchData() {
       try {
@@ -33,6 +35,7 @@ function List() {
     fetchData();
   }, [currentPage]);
 
+  // Get the Pokemon's info clicking on them
   const handlePokemonClick = async (pokemonName) => {
     try {
       const response = await axios.get(
@@ -48,6 +51,7 @@ function List() {
     setCurrentPage(newPage);
   };
 
+  // Searching the pokemon using the component
   const handleSearch = async () => {
     try {
       const response = await axios.get(
@@ -60,10 +64,12 @@ function List() {
     }
   };
 
+  // Manage the modal
   const closeModal = () => {
     setSelectedPokemon(null);
   };
 
+  // Filtering list in time
   useEffect(() => {
     setFilteredPokemon(
       pokemonList.filter((pokemon) =>

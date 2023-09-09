@@ -4,6 +4,7 @@ function Pagination({ currentPage, totalPages, handlePageChange }) {
   return (
     <nav aria-label="Pagination">
       <ul className="pagination justify-content-center">
+        {/* Verify if it can go forward or backward */}
         <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
           <button
             className="page-link"
