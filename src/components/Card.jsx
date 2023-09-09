@@ -1,6 +1,6 @@
 import React from "react";
 
-function PokemonCard({ pokemon, handlePokemonClick, selectedPokemon }) {
+function Card({ pokemon, handlePokemonClick, selectedPokemon }) {
   return (
     <div
       className="card mb-3"
@@ -29,4 +29,4 @@ function PokemonCard({ pokemon, handlePokemonClick, selectedPokemon }) {
   );
 }
 
-export default PokemonCard;
+export default Card;

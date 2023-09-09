@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SearchBar from "./SearchBar";
-import PokemonCard from "./Card";
-import PokemonModal from "./Modal";
+import Card from "./Card";
+import Modal from "./Modal";
 import Pagination from "./Pagination";
 
-function PokemonList() {
+function List() {
   const [pokemonList, setPokemonList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -82,7 +82,7 @@ function PokemonList() {
       <div className="row row-cols-2 row-cols-sm-4 row-cols-md-6 g-4">
         {filteredPokemon.map((pokemon) => (
           <div key={pokemon.name} className="col">
-            <PokemonCard
+            <Card
               pokemon={pokemon}
               handlePokemonClick={handlePokemonClick}
               selectedPokemon={selectedPokemon}
@@ -95,9 +95,9 @@ function PokemonList() {
         totalPages={totalPages}
         handlePageChange={handlePageChange}
       />
-      <PokemonModal selectedPokemon={selectedPokemon} closeModal={closeModal} />
+      <Modal selectedPokemon={selectedPokemon} closeModal={closeModal} />
     </div>
   );
 }
 
-export default PokemonList;
+export default List;

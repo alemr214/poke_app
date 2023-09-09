@@ -1,6 +1,6 @@
 import React from "react";
 
-function PokemonModal({ selectedPokemon, closeModal }) {
+function Modal({ selectedPokemon, closeModal }) {
   if (!selectedPokemon) {
     return null;
   }
@@ -79,4 +79,4 @@ function PokemonModal({ selectedPokemon, closeModal }) {
   );
 }
 
-export default PokemonModal;
+export default Modal;
